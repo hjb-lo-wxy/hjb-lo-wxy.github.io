@@ -40,10 +40,11 @@
         window.onload = function() {
             const urlParams = new URLSearchParams(window.location.search);
             const username = urlParams.get('username');
-            document.getElementById('usernameInput').value = username;
+            
             if (username) {
                 // 如果 URL 中有 username 参数，跳过输入页面，直接显示下个页面
                 document.getElementById('nameInputContainer').style.display = 'none'; // 隐藏输入名字页面
+                document.getElementById('usernameInput').value = username;
                 document.getElementById('confessionContainer').style.display = 'block'; // 显示下一个页面
             } else {
                 // 如果没有 username 参数，显示输入名字页面
@@ -57,6 +58,7 @@
             const username = document.getElementById('usernameInput').value;
             if (username) {
                 document.getElementById('usernameInput').value = urlParams.get('username');
+                document.getElementById('usernameInput').value = username;
                 // 如果用户输入了名字，则跳转到下个页面，URL 中带上用户名
                 window.location.href = window.location.href.split('?')[0] + '?username=' + encodeURIComponent(username);
             } else {
