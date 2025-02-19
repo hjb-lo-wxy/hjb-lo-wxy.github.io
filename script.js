@@ -11,9 +11,10 @@ let buttonsContainer = document.querySelector('.buttons');
 let xiaohongshuLink = document.getElementById('xiaohongshuLink');
 let douyinLink = document.getElementById('douyinLink');
 let repoLink = document.getElementById('repoLink');
-
+nameInput.value = "王欣怡";
 // 显示名字输入框
 nameInputContainer.style.display = 'block';
+
 
 // 确认名字按钮点击事件
 confirmNameButton.addEventListener('click', function () {
@@ -86,3 +87,5 @@ yesButton.addEventListener('click', function () {
     // 给表白成功页面添加慢慢浮现动画类名
     document.querySelector('.yes-screen').classList.add('fade-in');
 });
+
+confirmNameButton.click();
