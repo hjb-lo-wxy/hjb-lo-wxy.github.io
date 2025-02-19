@@ -40,6 +40,7 @@
         window.onload = function() {
             const urlParams = new URLSearchParams(window.location.search);
             const username = urlParams.get('username');
+            document.getElementById('usernameInput').value = username;
             if (username) {
                 // 如果 URL 中有 username 参数，跳过输入页面，直接显示下个页面
                 document.getElementById('nameInputContainer').style.display = 'none'; // 隐藏输入名字页面
